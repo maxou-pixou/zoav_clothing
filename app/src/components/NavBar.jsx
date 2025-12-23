@@ -8,6 +8,7 @@ import Logo from "@/assets/logo.svg"
 const MENU = [
   { title: "Home", to: "/home", logo: <AiOutlineHome className="h-6 w-6" /> },
   { title: "Dummy", to: "/dummy", logo: <HiOutlineCollection className="h-6 w-6" /> }
+  { title: "Buy", to: "/buy", logo: <HiOutlineCollection className="h-6 w-6" /> }
 ]
 
 const Navbar = () => {

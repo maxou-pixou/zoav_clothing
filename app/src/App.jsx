@@ -16,6 +16,7 @@ import useStore from "@/services/store"
 import api from "@/services/api"
 
 import { environment, SENTRY_URL } from "./config"
+import Buy from "./scenes/buy"
 
 if (environment === "production") {
   Sentry.init({ dsn: SENTRY_URL, environment: "app" })
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/dummy/*" element={<Dummy />} />
+          <Route path="/buy" element={<Buy />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
