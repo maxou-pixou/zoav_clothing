@@ -6,14 +6,6 @@ import { TbLogout, TbUser } from "react-icons/tb"
 import useStore from "@/services/store"
 import api from "@/services/api"
 
-const TopBar = () => {
-  return (
-    <div className="w-full h-full flex items-center justify-end px-4">
-      <ProfileMenu />
-    </div>
-  )
-}
-
 const ProfileMenu = () => {
   const { user, setUser } = useStore()
   const navigate = useNavigate()
@@ -71,4 +63,4 @@ const ProfileMenu = () => {
   )
 }
 
-export default TopBar
+export default ProfileMenu

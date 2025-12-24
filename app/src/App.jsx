@@ -9,7 +9,6 @@ import Account from "@/scenes/account"
 import Dummy from "@/scenes/dummy"
 
 import Navbar from "@/components/NavBar"
-import TopBar from "@/components/TopBar"
 import Loader from "@/components/loader"
 
 import useStore from "@/services/store"
@@ -26,14 +25,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<AuthLayout />}>
+        {/* <Route element={<AuthLayout />}>
           <Route path="/auth/*" element={<Auth />} />
-        </Route>
+        </Route> */}
         <Route element={<UserLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/dummy/*" element={<Dummy />} />
           <Route path="/buy" element={<Buy />} />
+          <Route path="/auth" element={<Auth />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
@@ -48,6 +48,7 @@ const AuthLayout = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-8 w-screen h-screen">
       <h1 className="text-3xl font-bold">Boilerplate</h1>
+      <h1>Bonjour</h1>
       <Outlet />
     </div>
   )
@@ -83,14 +84,11 @@ const UserLayout = () => {
   if (!user) return <Navigate to="/auth" replace={true} />
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden lg:flex-row">
-      <nav className="w-56 absolute left-0 top-0">
+    <div className="flex flex-col h-screen overflow-hidden">
+      <nav>
         <Navbar />
       </nav>
-      <main className="ml-56 h-full w-full overflow-auto bg-gray-50">
-        <div className="h-14 border-b border-secondary bg-white">
-          <TopBar />
-        </div>
+      <main className="h-full w-full overflow-auto bg-gray-50">
         <Outlet />
       </main>
     </div>
