@@ -2,8 +2,14 @@ import { React } from "react"
 
 const BrandLogo = () => {
     return (
-        <div className="BrandLogo" style={{ display: "flex", justifyContent: "center" }}>
-            <img src="./assets/zoav_logo.png" alt="logo zoav" style={{ transform: "scale(0.8)", display: "block", backgroundColor: "transparent", maxHeight: "50px" }} />
+        <div className="BrandLogo" style={{ 
+            display: "flex", 
+            justifyContent: "center", 
+            // background: "#ffffff",
+            borderRadius: "16px",
+            
+            }}>
+            <img src="./assets/zoav_logo.svg" alt="logo zoav" style={{  filter: "invert(1)", display: "block", backgroundColor: "transparent", maxHeight: "50px" }} />
         </div>
     )
 }

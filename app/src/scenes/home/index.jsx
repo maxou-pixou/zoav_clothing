@@ -1,10 +1,10 @@
 import React from "react"
-import BrandLogo from "@/components/Brandlogo"
+import BrandTitle from "@/components/BrandTitle"
 
 export default function Home() {
   return (
     <div className="p-8">
-      <BrandLogo />
+      <BrandTitle />
     </div>
   )
 }

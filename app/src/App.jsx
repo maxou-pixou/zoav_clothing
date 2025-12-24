@@ -7,6 +7,7 @@ import Auth from "@/scenes/auth"
 import Home from "@/scenes/home"
 import Account from "@/scenes/account"
 import Dummy from "@/scenes/dummy"
+import Cart from "@/scenes/cart"
 
 import Navbar from "@/components/NavBar"
 import Loader from "@/components/loader"
@@ -25,15 +26,16 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route element={<AuthLayout />}>
+        <Route element={<AuthLayout />}>
           <Route path="/auth/*" element={<Auth />} />
-        </Route> */}
+        </Route>
         <Route element={<UserLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/dummy/*" element={<Dummy />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
@@ -88,7 +90,7 @@ const UserLayout = () => {
       <nav>
         <Navbar />
       </nav>
-      <main className="h-full w-full overflow-auto bg-gray-50">
+      <main className="h-full w-full overflow-auto bg-gray-50 pt-16">
         <Outlet />
       </main>
     </div>
