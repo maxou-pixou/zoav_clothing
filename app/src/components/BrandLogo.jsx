@@ -1,15 +1,28 @@
-import { React } from "react"
+import React from "react"
 
-const BrandLogo = () => {
+const BrandLogo = ({ variant = "black", scale = "1"}) => {
+    const filterStyle = variant === "white" ? "invert(1)" : "invert(0)"
+
     return (
-        <div className="BrandLogo" style={{ 
-            display: "flex", 
-            justifyContent: "center", 
-            // background: "#ffffff",
-            borderRadius: "16px",
-            
-            }}>
-            <img src="./assets/zoav_logo.svg" alt="logo zoav" style={{  filter: "invert(1)", display: "block", backgroundColor: "transparent", maxHeight: "50px" }} />
+        <div
+            className="BrandLogo"
+            style={{
+                display: "flex",
+                justifyContent: "center",
+                borderRadius: "16px",
+            }}
+        >
+            <img
+                src="./assets/zoav_logo.svg"
+                alt="logo zoav"
+                style={{
+                    display: "block",
+                    backgroundColor: "transparent",
+                    maxHeight: "50px",
+                    filter: filterStyle,
+                    transform: `scale(${scale})`
+                }}
+            />
         </div>
     )
 }

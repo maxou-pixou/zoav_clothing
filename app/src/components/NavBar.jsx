@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <div className="w-full bg-primary h-16">
       <div className="flex flex-row gap-2 justify-between items-center p-2 pl-4 pr-4 h-full">
-        <BrandLogo />
+        <BrandLogo variant="white" />
         <div className="flex flex-row gap-2">
           {MENU.filter(menu => !menu.alignRight).map((menu, index) => (
             <NavLink
