@@ -5,15 +5,15 @@ export default function Home() {
   const mainPageWallpaper = {
     backgroundImage: "url('./assets/diary.svg')",
     backgroundRepeat: "repeat-y",
-    backgroundPosition: "left top",
+    // backgroundPosition: "left top",
     width: "50vw", 
   };
 
   const photos = [
     "/assets/home_1.png",
-    "/assets/home_2.png",
     "/assets/home_3.png",
     "/assets/home_4.png",
+    "/assets/home_2.png",
   ];
 
   return (
@@ -25,19 +25,21 @@ export default function Home() {
         <div style={mainPageWallpaper}></div>
 
         
-        <div className="w-1/2 flex flex-wrap -mx-2">
+        <div className="w-1/2 flex flex-wrap -mx-2" >
           {photos.map((photo, index) => (
             <div
               key={index}
               className="w-1/2 mb-4" 
               style={{
-                marginLeft: index % 2 !== 0 ? "275px" : 0, 
+                marginLeft: index % 2 !== 0 ? "275px" : "0px", 
               }}
             >
               <img
                 src={photo}
                 alt={`homePagePhoto ${index + 1}`}
-                className="w-full h-auto object-cover rounded scale-105 transition-transform duration-300 hover:scale-110"
+                // className="w-full max-w-full max-h-full h-auto object-cover 
+                // rounded scale-105 transition-transform duration-300 hover:scale-105"
+                className= "w-full h-auto max-w-full object-cover rounded transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
@@ -45,11 +47,11 @@ export default function Home() {
       </div>
 
       
-      <div className="mt-4 flex space-x-4">
+      {/* <div className="mt-4 flex space-x-4">
         <a href="/buy" className="text-blue-500 hover:text-blue-700">Catalogue</a>
         <a href="/buy/jeans" className="text-blue-500 hover:text-blue-700">Jeans</a>
         <a href="/buy/chemises" className="text-blue-500 hover:text-blue-700">Chemises</a>
-      </div>
+      </div> */}
     </body>
   );
 }
