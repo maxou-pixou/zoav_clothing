@@ -23,7 +23,7 @@ export default defineConfig({
   },
   build: {
     minify: false,
-    outDir: 'dist'
+    outDir: 'build'
   },
   esbuild: {
     loader: 'jsx',
