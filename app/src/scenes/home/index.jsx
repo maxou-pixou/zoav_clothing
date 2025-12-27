@@ -15,14 +15,12 @@ export default function Home() {
       </p>
 
       <div className="flex flex-col md:flex-row relative">
-        {/* Left background + ClothCategories */}
         <div
           className="hidden md:flex md:flex-col md:w-1/2 bg-repeat-y"
           style={{
             backgroundImage: "url('./assets/diary.svg')"
           }}
         >
-          {/* Cloth categories décalées vers le quart gauche */}
           <div className="p-8 flex flex-col gap-6" style={{ marginLeft: "15%" }}>
             <ClothCategory image="/assets/category_jean.png" categoryName="Jeans" path="/buy/jean" className="w-48 md:w-56 lg:w-60" />
 
@@ -30,7 +28,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right photos */}
         <div className="w-full md:w-1/2 flex flex-wrap px-2 py-4">
           {photos.map((photo, index) => (
             <div key={index} className="w-full sm:w-1/2 p-2">

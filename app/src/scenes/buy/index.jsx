@@ -4,7 +4,6 @@ import ClothCategory from "@/components/ClothCategory"
 export default function Buy() {
   return (
     <div>
-      {/* Titre et ligne */}
       <div className="p-8">
         <h1 className="text-2xl text-center font-bold text-gray-900">Catalogue</h1>
         <div className="mt-6 w-full max-w-5xl h-[3px] bg-black rounded mx-auto" />
