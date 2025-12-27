@@ -19,6 +19,7 @@ import { environment, SENTRY_URL } from "./config"
 import Buy from "@/scenes/buy"
 import CategoryJean from "@/scenes/categoryJean"
 import CategoryShirt from "@/scenes/categoryShirt"
+import Portfolio from "@/scenes/portfolio"
 
 if (environment === "production") {
   Sentry.init({ dsn: SENTRY_URL, environment: "app" })
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/buy/jean" element={<CategoryJean />} />
           <Route path="/buy/shirt" element={<CategoryShirt />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />

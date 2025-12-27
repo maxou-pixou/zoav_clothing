@@ -4,6 +4,7 @@ import { AiOutlineHome, AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 import { HiOutlineCollection } from "react-icons/hi"
 import { IoBookOutline, IoCartOutline } from "react-icons/io5"
 import { CiLogin } from "react-icons/ci"
+import { MdOutlinePhotoCamera } from "react-icons/md"
 
 import BrandLogo from "@/components/BrandLogo"
 
@@ -11,8 +12,9 @@ const MENU = [
   { title: "Home", to: "/home", logo: <AiOutlineHome className="h-6 w-6" /> },
   { title: "Dummy", to: "/dummy", logo: <HiOutlineCollection className="h-6 w-6" /> },
   { title: "Catalogue", to: "/buy", logo: <IoBookOutline className="h-6 w-6" /> },
+  { title: "Portfolio", to: "/portfolio", logo: <MdOutlinePhotoCamera className="h-6 w-6" /> },
   { title: "Panier", to: "/cart", logo: <IoCartOutline className="h-6 w-6" /> },
-  { title: "Se Connecter", to: "/auth", logo: <CiLogin className="h-6 w-6" /> },
+  { title: "Se Connecter", to: "/auth", logo: <CiLogin className="h-6 w-6" /> }
 ]
 
 const Navbar = () => {
