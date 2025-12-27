@@ -1,26 +1,25 @@
 import React from "react"
 
-const BrandLogo = ({ variant = "black", scale = "1"}) => {
+const BrandLogo = ({ variant = "black", scale = 1 }) => {
     const filterStyle = variant === "white" ? "invert(1)" : "invert(0)"
 
     return (
-        <div
-            className="BrandLogo"
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                borderRadius: "16px",
-            }}
-        >
+        <div className="flex justify-center rounded-lg">
             <img
                 src="./assets/zoav_logo.svg"
                 alt="logo zoav"
+                className={`
+                    h-10         /* mobile */
+                    sm:h-12      /* small screens */
+                    md:h-14      /* medium screens */
+                    lg:h-14      /* large screens */
+                    2xl:h-18     /* extra large screens */
+        `}
                 style={{
-                    display: "block",
-                    backgroundColor: "transparent",
-                    maxHeight: "50px",
                     filter: filterStyle,
-                    transform: `scale(${scale})`
+                    transform: `scale(${scale})`,
+                    display: "block",
+                    backgroundColor: "transparent"
                 }}
             />
         </div>
